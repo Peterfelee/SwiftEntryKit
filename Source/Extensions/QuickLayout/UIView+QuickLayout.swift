@@ -225,7 +225,7 @@ public extension QLView {
      - returns: The instance of QLCenterConstraints - see definition (discardable).
      */
     @discardableResult
-    func centerInSuperview(offset: CGFloat = 0, priority: QLPriority = .required) -> QLCenterConstraints? {
+    internal func centerInSuperview(offset: CGFloat = 0, priority: QLPriority = .required) -> QLCenterConstraints? {
         let center = layoutToSuperview(.centerX, .centerY, offset: offset)
         guard !center.isEmpty else {
             return nil
